@@ -1,0 +1,88 @@
+import { CATEGORIES, CATEGORY_SLUGS, CATEGORY_GRADIENTS } from '../utils/constants';
+
+// ─── Categories for "All Categories" 3×3 grid ───────────────────────
+const mockCategories = [
+  {
+    id: 'cat-1',
+    name: CATEGORIES.TECH_GADGETS,
+    slug: CATEGORY_SLUGS[CATEGORIES.TECH_GADGETS],
+    bannerImage: '/images/banners/tech-gadgets.jpg',
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.TECH_GADGETS],
+    creatorCount: 48,
+    description: 'Explore live streams featuring the latest gadgets, electronics, and tech accessories.',
+  },
+  {
+    id: 'cat-2',
+    name: CATEGORIES.FASHION,
+    slug: CATEGORY_SLUGS[CATEGORIES.FASHION],
+    bannerImage: '/images/banners/fashion.jpg',
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.FASHION],
+    creatorCount: 65,
+    description: 'Discover trending fashion brands, clothing hauls, and style tips from top creators.',
+  },
+  {
+    id: 'cat-3',
+    name: CATEGORIES.BEAUTY_PERSONAL_CARE,
+    slug: CATEGORY_SLUGS[CATEGORIES.BEAUTY_PERSONAL_CARE],
+    bannerImage: null,
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.BEAUTY_PERSONAL_CARE],
+    creatorCount: 72,
+    description: 'Watch live beauty tutorials, skincare routines, and product demos.',
+  },
+  {
+    id: 'cat-4',
+    name: CATEGORIES.WELLNESS,
+    slug: CATEGORY_SLUGS[CATEGORIES.WELLNESS],
+    bannerImage: '/images/banners/wellness.jpg',
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.WELLNESS],
+    creatorCount: 34,
+    description: 'Find wellness brands, supplements, and healthy living streams.',
+  },
+  {
+    id: 'cat-5',
+    name: CATEGORIES.SPORTS_FITNESS,
+    slug: CATEGORY_SLUGS[CATEGORIES.SPORTS_FITNESS],
+    bannerImage: '/images/banners/sports-fitness.jpg',
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.SPORTS_FITNESS],
+    creatorCount: 41,
+    description: 'Shop sports gear, fitness equipment, and activewear from live sellers.',
+  },
+  {
+    id: 'cat-6',
+    name: CATEGORIES.HOME_LIVING,
+    slug: CATEGORY_SLUGS[CATEGORIES.HOME_LIVING],
+    bannerImage: null,
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.HOME_LIVING],
+    creatorCount: 29,
+    description: 'Browse home décor, furniture, and interior design live shopping.',
+  },
+  {
+    id: 'cat-7',
+    name: CATEGORIES.FOOD_COOKING,
+    slug: CATEGORY_SLUGS[CATEGORIES.FOOD_COOKING],
+    bannerImage: null,
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.FOOD_COOKING],
+    creatorCount: 23,
+    description: 'Watch live cooking demos, food product reviews, and kitchen gadget showcases.',
+  },
+  {
+    id: 'cat-8',
+    name: CATEGORIES.KIDS_FAMILY,
+    slug: CATEGORY_SLUGS[CATEGORIES.KIDS_FAMILY],
+    bannerImage: null,
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.KIDS_FAMILY],
+    creatorCount: 18,
+    description: 'Discover family-friendly products, toys, and kids essentials live.',
+  },
+  {
+    id: 'cat-9',
+    name: CATEGORIES.PETS,
+    slug: CATEGORY_SLUGS[CATEGORIES.PETS],
+    bannerImage: null,
+    bannerGradient: CATEGORY_GRADIENTS[CATEGORIES.PETS],
+    creatorCount: 15,
+    description: 'Shop pet supplies, accessories, and watch adorable pet product demos.',
+  },
+];
+
+export default mockCategories;
