@@ -90,7 +90,7 @@ export default function HomePage() {
               LiveShopMarket
             </h1>
             <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md px-4 sm:px-0">
-              Lorem ipsum sit dolor, consectetur
+              Discover products through live streams from your favorite creators. Watch in real time, ask questions, and shop instantly
             </p>
             <div className="w-full max-w-xl px-4 sm:px-0">
               <SearchBar
