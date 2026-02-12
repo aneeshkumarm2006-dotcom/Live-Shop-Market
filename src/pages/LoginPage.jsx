@@ -130,8 +130,8 @@ export default function LoginPage() {
       {/* ═══════════════════════════════════════════════════════
           LEFT COLUMN — FORM
           ═══════════════════════════════════════════════════════ */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-6 py-8 sm:py-10 md:px-12 lg:px-16 xl:px-20">
-        <div className="w-full max-w-[440px]">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-6 sm:px-8 py-8 sm:py-12 md:px-12 lg:px-16 xl:px-24">
+        <div className="w-full max-w-[440px] sm:max-w-[480px]">
           {/* ── Heading ──────────────────────────────────── */}
           <div className="mb-8 lg:mb-10">
             <h1 className="text-[22px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-extrabold leading-tight text-text-heading font-[var(--font-heading)]">

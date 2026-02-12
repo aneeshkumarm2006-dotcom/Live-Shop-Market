@@ -17,11 +17,11 @@ import { useAuth } from '@context/AuthContext';
 // ──────────────────────────────────────────────────────────────────────
 function Toggle({ enabled, onChange, label, description }) {
   return (
-    <div className="flex items-center justify-between py-3">
-      <div className="pr-4">
+    <div className="flex items-center justify-between py-3 sm:py-4 gap-4">
+      <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-text-primary">{label}</p>
         {description && (
-          <p className="text-xs text-text-secondary mt-0.5">{description}</p>
+          <p className="text-xs text-text-secondary mt-0.5 leading-snug">{description}</p>
         )}
       </div>
       <button
@@ -57,14 +57,14 @@ function Section({ icon: Icon, title, children }) {
   return (
     <div className="bg-bg-card rounded-[var(--radius-card)] border border-border-light shadow-[var(--shadow-card)] overflow-hidden">
       {/* Section header */}
-      <div className="flex items-center gap-3 px-5 py-4 border-b border-border-light bg-bg-lighter">
-        {Icon && <Icon className="w-5 h-5 text-primary" />}
-        <h2 className="font-[var(--font-heading)] text-base md:text-lg font-semibold text-text-heading">
+      <div className="flex items-center gap-3 px-4 sm:px-6 py-3 sm:py-4 border-b border-border-light bg-bg-lighter">
+        {Icon && <Icon className="w-5 h-5 text-primary shrink-0" />}
+        <h2 className="font-[var(--font-heading)] text-base md:text-lg font-semibold text-text-heading truncate">
           {title}
         </h2>
       </div>
       {/* Section body */}
-      <div className="p-5">{children}</div>
+      <div className="p-4 sm:p-6">{children}</div>
     </div>
   );
 }
@@ -278,7 +278,7 @@ export default function SettingsPage() {
               LOGOUT
               ══════════════════════════════════════════════════ */}
           <div className="bg-bg-card rounded-[var(--radius-card)] border border-red-200 shadow-[var(--shadow-card)] overflow-hidden">
-            <div className="p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <h2 className="font-[var(--font-heading)] text-base font-semibold text-error">
                   Log Out

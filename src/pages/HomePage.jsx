@@ -65,7 +65,7 @@ export default function HomePage() {
     <PageLayout fullWidth>
       {/* HERO */}
       <section className="relative w-full overflow-hidden">
-        <div className="gradient-primary relative w-full pt-32 sm:pt-40 md:pt-48 lg:pt-56 pb-24 sm:pb-28 md:pb-32 lg:pb-36">
+        <div className="gradient-primary relative w-full pt-28 sm:pt-40 md:pt-48 lg:pt-56 pb-20 sm:pb-28 md:pb-32 lg:pb-36">
           <motion.div
             className="absolute inset-x-0 bottom-0 z-0 flex justify-center translate-y-[-12%]"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -86,13 +86,13 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <h1 className="font-[var(--font-logo)] text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-3 drop-shadow-md">
+            <h1 className="font-[var(--font-logo)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-3 drop-shadow-md">
               LiveShopMarket
             </h1>
-            <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md">
+            <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md px-4 sm:px-0">
               Lorem ipsum sit dolor, consectetur
             </p>
-            <div className="w-full max-w-xl px-2 sm:px-0">
+            <div className="w-full max-w-xl px-4 sm:px-0">
               <SearchBar
                 placeholder="What are you watching today?"
                 size="lg"
@@ -129,7 +129,7 @@ export default function HomePage() {
           </div>
 
           {searchResults.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {searchResults.map((creator) => (
                 <BrandCard key={creator.id} creator={creator} />
               ))}
@@ -271,14 +271,14 @@ export default function HomePage() {
 
       {/* CURRENTLY LIVE BRANDS */}
       {liveCreators.length > 0 && (
-        <section className="w-full bg-bg-lighter py-10 md:py-14">
+        <section className="w-full bg-bg-lighter py-8 sm:py-10 md:py-14">
           <div className="container-app">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <Badge variant="live" size="sm" />
-              <h3 className="font-[var(--font-heading)] text-xl md:text-2xl font-bold text-text-heading">Currently Live</h3>
+              <h3 className="font-[var(--font-heading)] text-lg sm:text-xl md:text-2xl font-bold text-text-heading">Currently Live</h3>
             </div>
 
-            <div className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+            <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory">
               {liveCreators.map((creator) => {
                 const firstPlatform = creator.currentLivePlatforms?.[0];
                 const firstLiveUrl = firstPlatform ? creator.currentLiveLinks?.[firstPlatform] : null;
@@ -286,10 +286,10 @@ export default function HomePage() {
                 return (
                   <div
                     key={creator.id}
-                    className="group flex-shrink-0 snap-start flex flex-col items-center gap-3 w-[120px] sm:w-[140px]"
+                    className="group flex-shrink-0 snap-start flex flex-col items-center gap-2 w-[110px] sm:w-[140px]"
                   >
                     <Link to={`/brand/${creator.id}`} className="relative">
-                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[3px] bg-gradient-to-br from-live-red via-red-500 to-orange-400 live-pulse">
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[3px] bg-gradient-to-br from-live-red via-red-500 to-orange-400 live-pulse transition-transform duration-300 group-hover:scale-105">
                         <Avatar src={creator.profilePicture} alt={creator.name} size="full" className="w-full h-full border-2 border-white" />
                       </div>
                       <span className="absolute bottom-0.5 right-0.5 w-4 h-4 sm:w-5 sm:h-5 bg-live-red rounded-full border-2 border-white flex items-center justify-center">
@@ -299,7 +299,7 @@ export default function HomePage() {
 
                     <Link
                       to={`/brand/${creator.id}`}
-                      className="text-xs sm:text-sm font-medium text-text-primary text-center text-truncate w-full group-hover:text-primary transition-colors no-underline"
+                      className="text-xs sm:text-sm font-medium text-text-primary text-center truncate w-full group-hover:text-primary transition-colors no-underline px-1"
                     >
                       {creator.name}
                     </Link>
@@ -307,7 +307,7 @@ export default function HomePage() {
                     {firstLiveUrl && (
                       <ExternalLink
                         href={firstLiveUrl}
-                        className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-live-red/10 text-live-red text-[10px] font-semibold hover:bg-live-red/20 transition-colors no-underline"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-live-red/10 text-live-red text-[10px] font-semibold hover:bg-live-red/20 transition-colors no-underline"
                         title={`Watch on ${PLATFORM_LABELS[firstPlatform] || firstPlatform}`}
                       >
                         <PlatformIcon platform={firstPlatform} size={12} />

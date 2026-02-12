@@ -213,7 +213,7 @@ export default function AllCategoriesPage() {
                         className="font-bold tracking-wide whitespace-nowrap"
                         style={{
                           fontFamily: 'var(--font-heading)',
-                          fontSize: 'var(--text-xl)',
+                          fontSize: 'clamp(1rem, 4vw, 1.25rem)', /* Responsive clamp */
                           color: badgeText,
                         }}
                       >

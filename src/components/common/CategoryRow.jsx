@@ -89,7 +89,7 @@ export default function CategoryRow({ title, slug, creators, className }) {
           {creators.map((creator, index) => (
             <motion.div
               key={creator.id}
-              className="snap-start shrink-0 w-[160px] sm:w-[180px] md:w-[200px]"
+              className="snap-start shrink-0 w-[140px] sm:w-[160px] md:w-[200px]"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.06, duration: 0.35, ease: 'easeOut' }}

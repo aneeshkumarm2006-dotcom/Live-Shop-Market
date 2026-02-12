@@ -107,7 +107,7 @@ export default function BrandCard({ creator, className, onFavoriteToggle }) {
       </div>
 
       {/* Card body */}
-      <div className="flex flex-col items-center w-full pt-10 pb-4 px-3">
+      <div className="flex flex-col items-center w-full pt-8 sm:pt-10 pb-3 sm:pb-4 px-2 sm:px-3">
         {/* Profile picture */}
         <div className="overflow-hidden rounded-full mb-3">
           <Avatar

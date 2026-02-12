@@ -73,7 +73,7 @@ export default function CreatorDashboardPage() {
             </p>
 
             {/* Quick Stats Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-6">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mt-6">
               <StatCard
                 icon={HiUsers}
                 label="Total Followers"
@@ -110,23 +110,21 @@ export default function CreatorDashboardPage() {
                 {/* Toggle */}
                 <button
                   onClick={() => setIsLive((prev) => !prev)}
-                  className={`relative inline-flex h-7 w-13 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/30 ${
-                    isLive ? 'bg-live-red' : 'bg-gray-300'
-                  }`}
+                  className={`relative inline-flex h-7 w-13 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/30 ${isLive ? 'bg-live-red' : 'bg-gray-300'
+                    }`}
                   role="switch"
                   aria-checked={isLive}
                   aria-label="Toggle live status"
                 >
                   <span
-                    className={`inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform duration-300 ${
-                      isLive ? 'translate-x-7' : 'translate-x-1'
-                    }`}
+                    className={`inline-block h-5 w-5 rounded-full bg-white shadow-sm transition-transform duration-300 ${isLive ? 'translate-x-7' : 'translate-x-1'
+                      }`}
                   />
                 </button>
               </div>
 
               {isLive ? (
-                  <div className="space-y-4">
+                <div className="space-y-4">
                   <div className="flex items-center gap-3 flex-wrap">
                     <Badge type="live">LIVE</Badge>
                     <span className="text-sm text-text-secondary">

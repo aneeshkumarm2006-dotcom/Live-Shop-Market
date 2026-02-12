@@ -310,11 +310,10 @@ export default function CreatorProfileEditPage() {
                     return (
                       <label
                         key={key}
-                        className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 cursor-pointer select-none transition-all duration-200 ${
-                          active
+                        className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border-2 cursor-pointer select-none transition-all duration-200 ${active
                             ? 'border-primary bg-primary-50 shadow-sm'
                             : 'border-border-light bg-white hover:border-gray-300'
-                        }`}
+                          }`}
                       >
                         <input
                           type="checkbox"
@@ -352,16 +351,17 @@ export default function CreatorProfileEditPage() {
             </Card>
 
             {/* ═══ 5. SAVE BUTTON ══════════════════════════════ */}
-            <div className="flex items-center justify-between gap-4 pb-4">
+            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pb-4">
               <Button
                 variant="ghost"
                 size="md"
                 type="button"
                 onClick={() => navigate('/dashboard')}
+                className="w-full sm:w-auto"
               >
                 Cancel
               </Button>
-              <Button variant="primary" size="lg" type="submit">
+              <Button variant="primary" size="lg" type="submit" className="w-full sm:w-auto">
                 <HiCheck className="w-4 h-4" />
                 Save Changes
               </Button>

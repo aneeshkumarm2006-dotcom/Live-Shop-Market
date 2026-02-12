@@ -143,7 +143,7 @@ export default function BrandProfilePage() {
           </div>
 
           {/* ── Info column ── */}
-          <div className="flex-1 min-w-0 pt-1">
+          <div className="flex-1 min-w-0 pt-1 text-center sm:text-left">
             {/* Top row: name + favorite */}
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               {/* Left: Name, category, last streamed */}
@@ -151,7 +151,7 @@ export default function BrandProfilePage() {
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary leading-tight">
                   {creator.name}
                 </h1>
-                <div className="flex flex-wrap items-center gap-2 mt-1.5">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mt-1.5">
                   <Badge type="category" category={creator.category} text={creator.category} />
                   {lastStreamedLabel && (
                     <span className="text-sm text-text-secondary">
@@ -181,12 +181,12 @@ export default function BrandProfilePage() {
             </div>
 
             {/* Bio */}
-            <p className="mt-4 text-text-body text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="mt-4 text-text-body text-sm sm:text-base leading-relaxed max-w-2xl mx-auto sm:mx-0">
               {creator.bio}
             </p>
 
             {/* Stats row */}
-            <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 mt-4">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 sm:gap-x-6 gap-y-2 mt-4">
               {/* Monthly viewers */}
               <div className="flex items-center gap-1.5 text-sm text-text-secondary">
                 <HiOutlineEye className="w-5 h-5 text-text-muted" />
@@ -361,10 +361,9 @@ function UpcomingStreams({ streams }) {
                         px-4 py-2 rounded-full text-xs font-semibold
                         transition-all duration-200 cursor-pointer
                         border
-                        ${
-                          isSet
-                            ? 'bg-accent text-accent-text border-accent-hover shadow-sm'
-                            : 'bg-accent/80 text-accent-text border-accent hover:bg-accent hover:shadow-sm'
+                        ${isSet
+                          ? 'bg-accent text-accent-text border-accent-hover shadow-sm'
+                          : 'bg-accent/80 text-accent-text border-accent hover:bg-accent hover:shadow-sm'
                         }
                       `}
                     >
@@ -532,7 +531,7 @@ function LiveNowBanner({ creatorName, platforms, liveLinks }) {
     >
       {/* Banner */}
       <div className="mx-auto max-w-3xl px-4 pb-4 sm:pb-6">
-        <div className="relative bg-accent rounded-2xl shadow-xl border border-accent-hover px-4 py-4 sm:px-8 sm:py-5 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+        <div className="relative bg-accent rounded-2xl shadow-xl border border-accent-hover px-4 py-4 sm:px-8 sm:py-5 flex flex-col md:flex-row items-center gap-3 sm:gap-4 text-center md:text-left">
 
           {/* Close button */}
           <button
